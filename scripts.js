@@ -11,6 +11,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
 const storage = firebase.storage();
+const database = firebase.database()
 
 // Sample database of names and tasks
 const tasksDatabase = {
@@ -164,14 +165,22 @@ function submitProof() {
     const fileInput = document.getElementById("proofFile");
     const description = document.getElementById("proofDescription").value;
     const uploadResult = document.getElementById("uploadResult");
+    const participantName = document.getElementById("nameInput").value.trim();
+
 
     if (fileInput.files.length === 0) {
         uploadResult.textContent = "Error: No file selected. Quest proof required.";
         return;
     }
 
+    if (!participantName) {
+        uploadResult.textContent = "Error: Please enter your name before submitting.";
+        return;
+    }
+
     const file = fileInput.files[0];
-    const fileName = file.name;
+    const fileExtension = file.name.split('.').pop();
+    const fileName = `${participantName}_${Date.now()}.${fileExtension}`;
 
     // Create a reference to 'quest_proofs/FILENAME.jpg'
     const storageRef = storage.ref('quest_proofs/' + fileName);
@@ -186,6 +195,17 @@ function submitProof() {
     }).then((downloadURL) => {
         console.log('File available at', downloadURL);
         // Here you could save the downloadURL and description to a database if needed
+        uploadResult.textContent = `Quest proof received. File "${fileName}" successfully uploaded. Awaiting verification.`;
+        
+        // Save metadata to Realtime Database
+        const metadataRef = database.ref('quest_proofs').push();
+        return metadataRef.set({
+            participantName: participantName,
+            description: description,
+            fileUrl: downloadURL,
+            timestamp: firebase.database.ServerValue.TIMESTAMP
+        });
+    }).then(() => {
         uploadResult.textContent = `Quest proof received. File "${fileName}" successfully uploaded. Awaiting verification.`;
         
         // Clear the form
