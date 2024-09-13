@@ -12,7 +12,10 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
 const storage = firebase.storage();
-const database = firebase.database()
+const database = firebase.database();
+
+const botToken = '7269261799:AAHGjNywk0GmQKXeZu4sUO9myMoQ9_jrSUM'; // Replace with your actual bot token
+const chatId = '693835702'; // Replace with your actual chat ID
 
 // Sample database of names and tasks
 const tasksDatabase = {
@@ -209,6 +212,8 @@ function submitProof() {
     }).then(() => {
         uploadResult.textContent = `Quest proof received. File "${fileName}" successfully uploaded. Awaiting verification.`;
         
+        sendTelegramNotification(`Proof uploaded by ${participantName}. Description: ${description}`);
+
         // Clear the form
         fileInput.value = "";
         document.getElementById("proofDescription").value = "";
@@ -233,7 +238,10 @@ function typeWriter(text, elementId, speed = 50) {
     type();
   }
   
+
+
   document.addEventListener('DOMContentLoaded', function() {
+    
     const rules = [
       "Rule #1: Do not talk about the Quest.",
       "Rule #2: Do not talk about the Quest.",
@@ -320,6 +328,8 @@ function checkName() {
             taskResult.textContent = "";
             typeWriter(`Your Quest: ${task}`, "taskResult", 30);
             proofUpload.style.display = "block";
+
+            sendTelegramNotification(`Task retrieved by ${name}: ${task}`);
         } else {
             const closestName = findClosestName(name.toLowerCase());
             if (closestName) {
@@ -336,3 +346,20 @@ function useThisName(name) {
     document.getElementById("nameInput").value = name;
     checkName();
 }
+
+function sendTelegramNotification(message) {
+    fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: message
+      }),
+    })
+    .then(response => response.json())
+    .then(data => console.log('Telegram notification sent:', data))
+    .catch((error) => console.error('Error sending Telegram notification:', error));
+}
+  
