@@ -2,6 +2,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyCN6iRgRuSKeItO_1A-CUSpQtuW-oIo-XI",
   authDomain: "esnpartyquest.firebaseapp.com",
   projectId: "esnpartyquest",
+  databaseURL: "https://esnpartyquest-default-rtdb.europe-west1.firebasedatabase.app",
   storageBucket: "esnpartyquest.appspot.com",
   messagingSenderId: "252294601053",
   appId: "1:252294601053:web:e0a58c307be112ed37b0b4",
