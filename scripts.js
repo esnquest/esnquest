@@ -19,157 +19,153 @@ const chatId = '693835702'; // Replace with your actual chat ID
 
 // Sample database of names and tasks
 const tasksDatabase = {
-    "jakub bartůněk": "Ask Alistair Hay to list three things they love about their job.",
-    "valentine de voghel": "Make a proposal to Aline Marcionetti-Rusconi.",
-    "valtteri tuominen": "Make a proposal to Aline Marcionetti-Rusconi.",
-    "manon soenen": "Ask Yann Boudigou to show you their best trick shot on beer pong.",
-    "morgane hemingway": "Get Mara Blöchlinger to give you a taste of what she is preparing for tomorrow.",
-    "alexine simon": "Write 'Sarah > Blanche' on Blanche Roquejeoffre's white shirt.",
-    "frederique masse": "Steal the hat/cap of Thomas Bonnet.",
-    "lovisa grahn": "Write a big G on Guillaume Granger's white shirt.",
-    "mark rastert": "Write 'Blanche > Sarah' on Sarah Bruno's white shirt.",
-    "sofia gomes": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
-    "marianne leduc": "Get Cyril Udriot to mix one song of his liking. It has to be drum&bass.",
-    "cordula von heyl": "Ask Gauthier Ordonneau to play a round of shi-fu-shot with you. Best out of three wins, the loser has to take a shot.",
-    "nick hebenstreit": "Ask Gauthier Ordonneau to play a round of shi-fu-shot with you. Best out of three wins, the loser has to take a shot.",
-    "eduarda dionisio": "Get Lucie Zhou to give you a taste of what she is preparing for tomorrow.",
-    "amica swanepoel": "Have a picture taken of you taking a picture of Quentin Devaud.",
-    "elise gardeyn": "Draw 3 Toads on 3 different people and show it in one picture.",
-    "marius løfqvist": "Ask Gauthier Ordonneau to play a round of shi-fu-shot with you. Best out of three wins, the loser has to take a shot.",
-    "alessandro iencenella": "Make a proposal to Aline Marcionetti-Rusconi.",
-    "mariana alves": "Ask Gauthier Ordonneau to play a round of shi-fu-shot with you. Best out of three wins, the loser has to take a shot.",
-    "julia buchner": "Ask Emilien Ordonneau to share a funny nickname he had and take a picture with him.",
-    "mona volmich": "Write 'Blanche > Sarah' on Sarah Bruno's white shirt.",
-    "hendrik holzwarth": "Ask Gauthier Ordonneau to play a round of shi-fu-shot with you. Best out of three wins, the loser has to take a shot.",
-    "pauline halloy": "Challenge Augustin Henry to a push-up contest.",
-    "amelie topf": "Have a picture taken of you taking a picture of Quentin Devaud.",
-    "bartłomiej jawor": "Ask Arthur Speich to give you a piggyback ride for a few steps (safely and with consent).",
-    "arielle chaîné": "Write a big G on Guillaume Granger's white shirt.",
-    "catherine carpentier-desjardins": "Write 'Blanche > Sarah' on Sarah Bruno's white shirt.",
-    "sristi ramoutar": "Write 'Sarah > Blanche' on Blanche Roquejeoffre's white shirt.",
-    "nina seidel": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
-    "knut bugge": "Write 'Sarah > Blanche' on Blanche Roquejeoffre's white shirt.",
-    "isa-may beauchamp": "Write 'Blanche > Sarah' on Sarah Bruno's white shirt.",
-    "bianca baldassarre": "Write 'Sarah > Blanche' on Blanche Roquejeoffre's white shirt.",
-    "dana langeler": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
-    "justus dorsel": "Have a picture taken of you taking a picture of Quentin Devaud.",
-    "johanna schoele": "Ask Gauthier Ordonneau to play a round of shi-fu-shot with you. Best out of three wins, the loser has to take a shot.",
-    "sebastian mueller": "Write a big G on Guillaume Granger's white shirt.",
-    "dulce lopez": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
-    "zuhal fedai": "Ask Gauthier Ordonneau to play a round of shi-fu-shot with you. Best out of three wins, the loser has to take a shot.",
-    "viktor svalstedt": "Write a big G on Guillaume Granger's white shirt.",
-    "niels vignaux": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
-    "almog adato": "Write a big G on Guillaume Granger's white shirt.",
-    "janosh huyse": "Ask Gauthier Ordonneau to play a round of shi-fu-shot with you. Best out of three wins, the loser has to take a shot.",
-    "pontus hedman": "Ask Gauthier Ordonneau to play a round of shi-fu-shot with you. Best out of three wins, the loser has to take a shot.",
-    "vincent cautaerts": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
-    "jef de koker": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
-    "théodore olaru": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
-    "josefin olsson": "Ask Gauthier Ordonneau to play a round of shi-fu-shot with you. Best out of three wins, the loser has to take a shot.",
-    "gabriel probst": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
-    "lucas heule": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
-    "anastasia abe": "Challenge Luc Lücking to a thumb wrestling match and let someone capture it on video.",
-    "jolien van de walle": "Get Céline Kalbermatten to join you in making up a short song about the party.",
-    "marianne kersten": "Find Maxime Kaiser and ask them to draw a quick portrait of you.",
-    "amanda puerto-lichtenberg": "Find Yann Boudigou and ask them to do a silly face with you in a selfie.",
-    "tejas kochar": "Ask Gauthier Ordonneau to tell you a fun fact about themselves that no one else knows.",
-    "aditya narayan shahi": "Convince Mara Blöchlinger to create a secret handshake with you.",
-    "raphael tasseel": "Convince Alistair Hay to help you serenade a random participant with a love song.",
-    "neus bosch matheu": "Get Maxime Kaiser to help you create a funny meme, send it to the chat group on telegram.",
-    "eric oldgren": "Get Oriane Petit-Phar to tell a story using only sound effects.",
-    "bradley van hooff": "Challenge Herald Nakpil to a game of tic-tac-toe on your shirt.",
-    "francesco la rosa": "Have a staring contest with Itaï Yerly for at least 20 seconds.",
-    "alicja jonczyk": "Get Alicia Gamal to share an embarrassing story about themselves.",
-    "edoardo bargis": "Ask Maëlle Marro about the most adventurous thing they’ve ever done and share it with someone new.",
-    "paul mathiot": "Challenge Amine Bousseta to make the funniest animal noise they can.",
-    "asmita johri": "Get Aymeric Rio to do a TikTok dance with you and record it.",
-    "grzegorz statkiewicz": "Get Maxime Kaiser to participate in a 15-second dance battle with you.",
-    "alyssa popescu": "Get Mateo Tatzber to show you how to do a cool handshake.",
-    "anders eiersted molzen": "Ask Timur Unver to show you a hidden talent or party trick.",
-    "marie albrecht": "Find Colin Hafen and ask them to draw a quick portrait of you.",
-    "katrine broegger jensen": "Challenge Itaï Yerly to make the funniest animal noise they can.",
-    "rémi gardette": "Challenge Luc Lücking to a thumb wrestling match and let someone capture it on video.",
-    "neshon missaghian": "Get Maëlle Marro to show you how to do a cool handshake.",
-    "hsin ju liou": "Ask Arthur Speich about the most adventurous thing they’ve ever done and share it with someone new.",
-    "maria francesca spada": "Have a staring contest with Colin Hafen for at least 20 seconds.",
-    "david weber": "Have a staring contest with Maxime Kaiser for at least 20 seconds.",
-    "martha boosten": "Get Gauthier Ordonneau to do a TikTok dance with you and record it.",
-    "timon dries": "Ask Cyril Udriot to tell you a fun fact about themselves that no one else knows.",
-    "maria carolina hüning": "Get Sarah Bruno to show you how to do a cool handshake.",
-    "carl lingström": "Ask Itaï Yerly to tell you a fun fact about themselves that no one else knows.",
-    "philippe carrier": "Challenge Heloise Fabbretti to a game of tic-tac-toe on your shirt.",
-    "caroline borup jeppesen": "Find Alistair Hay and ask them to do a silly face with you in a selfie.",
-    "matti lehmann": "Ask Adrien Feillard to show you a hidden talent or party trick.",
-    "john larsson": "Challenge Celeste Paquin to make the funniest animal noise they can.",
-    "dilara baran": "Challenge Cyril Udriot to a thumb wrestling match and let someone capture it on video.",
-    "jeremy racine": "Get Lilou Castano to do a TikTok dance with you and record it.",
-    "laura linuesa domenech": "Convince Lucie Zhou to create a secret handshake with you.",
-    "sabina ghita": "Get Jonathan Zurbriggen to show you how to do a cool handshake.",
-    "xiao xiang": "Challenge Amine Bousseta to a game of tic-tac-toe on your shirt.",
-    "gabriella bjaaland": "Ask Yann Boudigou about the most adventurous thing they’ve ever done and share it with someone new.",
-    "ruadhán mac giolla phádraig": "Get Jonathan Zurbriggen to join you in making up a short song about the party.",
-    "sven wendler": "Ask Thomas de Masi to tell you a fun fact about themselves that no one else knows.",
-    "robert andersson": "Get Aymeric Rio to join you in making up a short song about the party.",
-    "cristian safta": "Get Arthur Speich to join you in making up a short song about the party.",
-    "viktor kjellsson": "Convince Sarah Bruno to help you serenade a random participant with a love song.",
-    "joe rizk": "Get Tim Lücking to do a TikTok dance with you and record it.",
-    "erik bessö": "Get Alicia Gamal to do a TikTok dance with you and record it.",
-    "clara wimmelmann": "Get Thomas Bonnet to show you how to do a cool handshake.",
-    "ben rené bjørsvik": "Challenge Tim Lücking to make the funniest animal noise they can.",
-    "rohan shetty": "Ask Mara Blöchlinger to show you a hidden talent or party trick.",
-    "marcin kleszcz": "Get Luc Lücking to help you create a funny meme, send it to the chat group on telegram.",
-    "junzhe chen": "Convince Oriane Petit-Phar to help you serenade a random participant with a love song.",
-    "herald nakpil": "Have a staring contest with Heloise Fabbretti for at least 20 seconds.",
-    "thomas de masi": "Challenge Chloé Dau to make the funniest animal noise they can.",
-    "yann boudigou": "Get Timur Unver to join you in making up a short song about the party.",
-    "arthur speich": "Challenge Thomas de Masi to make the funniest animal noise they can.",
-    "quentin devaud": "Ask Jonathan Zurbriggen to show you a hidden talent or party trick.",
-    "augustin henry": "Ask Chloé Dau to show you a hidden talent or party trick.",
-    "tahiry arintsoa": "Get Heloise Fabbretti to participate in a 15-second dance battle with you.",
-    "yann savioz": "Ask Alicia Gamal about the most adventurous thing they’ve ever done and share it with someone new.",
-    "heloise fabbretti": "Find Chloé Dau and ask them to draw a quick portrait of you.",
-    "celeste paquin": "Get Simon Desmaison to help you create a funny meme, send it to the chat group on telegram.",
-    "adrien feillard": "Get Yann Savioz to share an embarrassing story about themselves.",
-    "itaï yerly": "Get Amine Bousseta to share an embarrassing story about themselves.",
-    "maëlle marro": "Get Lucca Duarte Borges Ribeiro to participate in a 15-second dance battle with you.",
-    "alicia gamal": "Get Adrien Feillard to join you in making up a short song about the party.",
-    "alistair hay": "Convince Clara Gloge to help you serenade a random participant with a love song.",
-    "thomas bonnet": "Get Maëlle Marro to join you in making up a short song about the party.",
-    "cyril udriot": "Convince Jonathan Zurbriggen to help you serenade a random participant with a love song.",
-    "audrey adehossi": "Get Oriane Petit-Phar to show you how to do a cool handshake.",
-    "oriane petit-phar": "Get Lilou Castano to help you create a funny meme, send it to the chat group on telegram.",
-    "céline kalbermatten": "Challenge Maëlle Marro to a game of tic-tac-toe on your shirt.",
-    "chloé dau": "Get Amine Bousseta to tell a story using only sound effects.",
-    "tim lücking": "Convince Emilien Ordonneau to create a secret handshake with you.",
-    "emilien ordonneau": "Challenge Colin Hafen to make the funniest animal noise they can.",
-    "lucie zhou": "Challenge Thomas Bonnet to a game of tic-tac-toe on your shirt.",
-    "mara blöchlinger": "Convince Amine Bousseta to help you serenade a random participant with a love song.",
-    "ines acevedo": "Challenge Yann Boudigou to a game of tic-tac-toe on your shirt.",
-    "colin hafen": "Convince Alicia Gamal to help you serenade a random participant with a love song.",
-    "luc lücking": "Convince Emilien Ordonneau to create a secret handshake with you.",
-    "clara gloge": "Get Maëlle Marro to show you how to do a cool handshake.",
-    "noah trippant": "Ask Gauthier Ordonneau to show you a hidden talent or party trick.",
-    "aymeric rio": "Get Adrien Feillard to show you how to do a cool handshake.",
-    "tom rathjens": "Challenge Sarah Bruno to a game of tic-tac-toe on your shirt.",
-    "sarah bruno": "Get Thomas Bonnet to share an embarrassing story about themselves.",
-    "blanche roquejeoffre": "Ask Itaï Yerly to show you a hidden talent or party trick.",
-    "lilou castano": "Get Augustin Henry to do a TikTok dance with you and record it.",
-    "maxime kaiser": "Ask Timur Unver to tell you a fun fact about themselves that no one else knows.",
-    "gauthier ordonneau": "Ask Augustin Henry to show you a hidden talent or party trick.",
-    "mateo tatzber": "Get Quentin Devaud to help you create a funny meme, send it to the chat group on telegram.",
-    "jonathan zurbriggen": "Convince Noah Trippant to help you serenade a random participant with a love song.",
-    "amine bousseta": "Have a staring contest with Alicia Gamal for at least 20 seconds.",
-    "timur unver": "Get Simon Desmaison to share an embarrassing story about themselves.",
-    "simon desmaison": "Ask Itaï Yerly to tell you a fun fact about themselves that no one else knows.",
-    "tringa xuhli": "Have a staring contest with Amine Bousseta for at least 20 seconds.",
-    "lucca duarte borges ribeiro": "Get Colin Hafen to help you create a funny meme, send it to the chat group on telegram.",
-    }
+"abe anastasia": "During a conversation with Chloé Dau use emojis verbally (\"hmmm laughing face ahah\")",
+"adato almog": "Ask Gauthier Ordonneau to play a round of shi-fu-shot with you. Best out of three wins, the loser has to take a shot.",
+"albrecht marie": "Ask Céline Kalbermatten how much alcool you need to drink to be taken to the hospital",
+"alves mariana": "Ask Alistair Hay to list three things he loves about his job.",
+"andersson robert": "Get Lucie Zhou to give you a taste of what she is preparing for tomorrow.",
+"baldassarre bianca": "Ask her what would be her perfect lover",
+"baran dilara": "Have a picture taken of you taking a picture of Quentin Devaud.",
+"lavings carly": "Ask Audrey Adehossi how much alcool you need to to drink to be taken to the hospital",
+"bartůněk jakub": "Ask Arthur Speich to give you a piggyback ride for a few steps (safely and with consent).",
+"pfander mila": "Whish a happy 30 yearbirth to Colin Hafen",
+"bessö erik": "Ask Gauthier Ordonneau to play a round of shi-fu-shot with you. Best out of three wins, the loser has to take a shot.",
+"bjaaland gabriella": "Get Mara Blöchlinger to give you a taste of what she is preparing for tomorrow.",
+"bjørsvik ben rené": "Make a proposal to Aline Marcionetti-Rusconi.",
+"boosten martha": "Get Jonathan Zurbriggen to do a L on his forehead with you.",
+"borup jeppesen caroline": "Get Cyril Udriot to mix one song of his liking. It has to be drum&bass.",
+"bosch matheu neus": "Make a proposal to Aline Marcionetti-Rusconi.",
+"broegger jensen katrine": "Draw a few boxes on Tom Rathjens's t-shirt",
+"buchner julia": "Steal the hat/cap of Thomas Bonnet.",
+"bugge knut": "Write 'Sarah > Blanche' on Blanche Roquejeoffre's white shirt.",
+"engel mitchell": "Have a picture taken of you taking a picture of Quentin Devaud.",
+"carrier philippe": "Have a picture taken of you taking a picture of Quentin Devaud.",
+"cautaerts vincent": "Steal the hat/cap of Thomas Bonnet.",
+"agrawal mayur": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"zhou eric": "Challenge Augustin Henry to a push-up contest.",
+"de koker jef": "Ask Gauthier Ordonneau to play a round of shi-fu-shot with you. Best out of three wins, the loser has to take a shot.",
+"de voghel valentine": "Get Tringa Xuhli to say : \"I got scabbi in Australia\" in albanian",
+"grabowski maciek": "Ask Yann Boudigou to show you their best trick shot on beer pong.",
+"dorsel justus": "Draw a nice vito on Aymeric Rio's t-shirt",
+"dries timon": "Steal the hat/cap of Thomas Bonnet.",
+"fedai zuhal": "Make a proposal to Aline Marcionetti-Rusconi.",
+"gardette rémi": "Write 'Blanche > Sarah' on Sarah Bruno's white shirt.",
+"gardeyn elise": "Steal the hat/cap of Thomas Bonnet.",
+"ghita sabina": "Explain to Lilou Castano for five minutes why capitalism is the best society model possible.",
+"salel marina": "Ask Gauthier Ordonneau to play a round of shi-fu-shot with you. Best out of three wins, the loser has to take a shot.",
+"grahn lovisa": "Ask Gauthier Ordonneau to play a round of shi-fu-shot with you. Best out of three wins, the loser has to take a shot.",
+"halloy pauline": "Steal the hat/cap of Thomas Bonnet.",
+"hebenstreit nick": "Ask Gauthier Ordonneau to play a round of shi-fu-shot with you. Best out of three wins, the loser has to take a shot.",
+"hedman pontus": "During a conversation casually and offhandedly mention to Maxime Kaiser that you shat your pants",
+"hemingway morgane": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"heule lucas": "Make a proposal to Aline Marcionetti-Rusconi.",
+"holzwarth hendrik": "Ask Gauthier Ordonneau to play a round of shi-fu-shot with you. Best out of three wins, the loser has to take a shot.",
+"hüning maria carolina": "Ask Emilien Ordonneau to share a funny nickname he had and take a picture with him.",
+"huyse janosh": "Make a proposal to Aline Marcionetti-Rusconi.",
+"iencenella alessandro": "Ask Gauthier Ordonneau to play a round of shi-fu-shot with you. Best out of three wins, the loser has to take a shot.",
+"jawor bartłomiej": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"johri asmita": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"jonczyk alicja": "Ask Gauthier Ordonneau to play a round of shi-fu-shot with you. Best out of three wins, the loser has to take a shot.",
+"el mouttaki touria": "Ask Gauthier Ordonneau to play a round of shi-fu-shot with you. Best out of three wins, the loser has to take a shot.",
+"kjellsson viktor": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"kleszcz marcin": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"olyslaegers pieter": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"danielsson isabel": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"langeler dana": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"larsson john": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"de limburg stirum ferdinand": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"evsjukov alexander": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"lingström carl": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"linuesa domenech laura": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"liou hsin ju": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"løfqvist marius": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"lopez dulce": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"mac giolla phádraig ruadhán": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"anis nadim": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"mathiot paul": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"missaghian neshon": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"molzen anders eiersted": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"mueller sebastian": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"olaru théodore": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"oldgren eric": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"olsson josefin": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"popescu alyssa": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"probst gabriel": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"puerto-lichtenberg amanda": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"racine jeremy": "Ask Noah Trippens if you can change your activity for tomorrow (but don’t do it for real please. Pretty please).",
+"martín palma laura": "Challenge Cyril Udriot to a thumb wrestling match and let someone capture it on video.",
+"rizk joe": "Ask Quentin Devaud about the most adventurous thing they’ve ever done and share it with someone new.",
+"safta cristian": "Challenge Aymeric Rio to a game of tic-tac-toe on your shirt.",
+"schoele johanna": "Get Yann Boudigou to tell a story using only sound effects.",
+"seidel nina": "Have a staring contest with Thomas de Masi for at least 20 seconds.",
+"shahi aditya narayan": "Get Clara Gloge to participate in a 15-second dance battle with you.",
+"shetty rohan": "Get Simon Desmaison to show you how to do a cool handshake.",
+"simon alexine": "Challenge Yann Savioz to make the funniest animal noise they can.",
+"soenen manon": "Ask Celeste Paquin to tell you a fun fact about themselves that no one else knows.",
+"von querfurth benedikt": "Convince Sarah Bruno to help you serenade a random participant with a love song.",
+"statkiewicz grzegorz": "Get Lucie Zhou to share an embarrassing story about themselves.",
+"svalstedt viktor": "Get Mateo Tatzber to do a TikTok dance with you and record it.",
+"swanepoel amica": "Ask Mara Blöchlinger to show you a hidden talent or party trick.",
+"tasseel raphael": "Get Gauthier Ordonneau to help you create a funny meme, send it to the chat group on telegram.",
+"topf amelie": "Get Maxime Kaiser to join you in making up a short song about the party.",
+"tuominen valtteri": "Find Noah Trippant and ask them to draw a quick portrait of you.",
+"van de walle jolien": "Find Aymeric Rio and ask them to do a silly face with you in a selfie.",
+"van hooff bradley": "Convince Mara Blöchlinger to create a secret handshake with you.",
+"vignaux niels": "Get Emilien Ordonneau to join you in making up a short song about the party.",
+"volmich mona": "Ask Colin Hafen to show you a hidden talent or party trick.",
+"von heyl cordula": "Get Gauthier Ordonneau to participate in a 15-second dance battle with you.",
+"weber david": "Get Aymeric Rio to tell a story using only sound effects.",
+"wendler sven": "Get Herald Nakpil to share an embarrassing story about themselves.",
+"wimmelmann clara": "Get Audrey Adehossi to show you how to do a cool handshake.",
+"xiang xiao": "Challenge Cyril Udriot to make the funniest animal noise they can.",
+"herald nakpil": "Get Aymeric Rio to show you how to do a cool handshake.",
+"thomas de masi": "Find Alistair Hay and ask them to draw a quick portrait of you.",
+"yann boudigou": "Challenge Quentin Devaud to a game of tic-tac-toe on your shirt.",
+"arthur speich": "Ask Mateo Tatzber about the most adventurous thing they’ve ever done and share it with someone new.",
+"quentin devaud": "Convince Cyril Udriot to help you serenade a random participant with a love song.",
+"augustin henry": "Get Lilou Castano to tell a story using only sound effects.",
+"tahiry arintsoa": "Get Celeste Paquin to do a TikTok dance with you and record it.",
+"yann savioz": "Ask Augustin Henry to show you a hidden talent or party trick.",
+"heloise fabbretti": "Find Itaï Yerly and ask them to draw a quick portrait of you.",
+"celeste paquin": "Get Timur Unver to help you create a funny meme, send it to the chat group on telegram.",
+"adrien feillard": "Ask Audrey Adehossi to show you a hidden talent or party trick.",
+"itaï yerly": "Get Lucie Zhou to tell a story using only sound effects.",
+"cyril udriot": "Get Adrien Feillard to participate in a 15-second dance battle with you.",
+"audrey adehossi": "Ask Tringa Xuhli about the most adventurous thing they’ve ever done and share it with someone new.",
+"oriane petit-phar": "Have a staring contest with Jonathan Zurbriggen for at least 20 seconds.",
+"céline kalbermatten": "Ask Thomas Bonnet to show you a hidden talent or party trick.",
+"chloé dau": "Find Tim Lücking and ask them to do a silly face with you in a selfie.",
+"tim lücking": "Get Mara Blöchlinger to do a TikTok dance with you and record it.",
+"emilien ordonneau": "Convince Lucca Duarte Borges Ribeiro to create a secret handshake with you.",
+"lucie zhou": "Find Yann Boudigou and ask them to do a silly face with you in a selfie.",
+"mara blöchlinger": "Get Yann Savioz to show you how to do a cool handshake.",
+"ines acevedo": "Find Timur Unver and ask them to do a silly face with you in a selfie.",
+"colin hafen": "Convince Tom Rathjens to create a secret handshake with you.",
+"luc lücking": "Find Oriane Petit-Phar and ask them to draw a quick portrait of you.",
+"clara gloge": "Convince Herald Nakpil to help you serenade a random participant with a love song.",
+"noah trippant": "Get Colin Hafen to participate in a 15-second dance battle with you.",
+"aymeric rio": "Ask Blanche Roquejeoffre to show you a hidden talent or party trick.",
+"tom rathjens": "Ask Augustin Henry to show you a hidden talent or party trick.",
+"sarah bruno": "Find Quentin Devaud and ask them to draw a quick portrait of you.",
+"blanche roquejeoffre": "Get Quentin Devaud to help you create a funny meme, send it to the chat group on telegram.",
+"lilou castano": "Get Céline Kalbermatten to show you how to do a cool handshake.",
+"maxime kaiser": "Have a staring contest with Chloé Dau for at least 20 seconds.",
+"gauthier ordonneau": "Ask Maxime Kaiser to show you a hidden talent or party trick.",
+"mateo tatzber": "Ask Ines Acevedo to show you a hidden talent or party trick.",
+"jonathan zurbriggen": "Get Arthur Speich to participate in a 15-second dance battle with you.",
+"timur unver": "Convince Lucie Zhou to create a secret handshake with you.",
+"simon desmaison": "Challenge Colin Hafen to a game of tic-tac-toe on your shirt.",
+"tringa xuhli": "Get Gauthier Ordonneau to do a TikTok dance with you and record it.",
+"lucca duarte borges ribeiro": "Get Alistair Hay to participate in a 15-second dance battle with you.",
+"alistair hay": "Ask Heloise who kisses better, Tahiry, Roxanna or Ines.",
+"thomas bonnet": "Hug Jonathan Zurbriggen and take a picture of it.",    }
 
 function submitProof() {
     const fileInput = document.getElementById("proofFile");
     const description = document.getElementById("proofDescription").value;
     const uploadResult = document.getElementById("uploadResult");
     const participantName = document.getElementById("nameInput").value.trim();
+    const proofUploadForm = document.getElementById("proofUpload");
 
 
     if (fileInput.files.length === 0) {
@@ -210,7 +206,9 @@ function submitProof() {
             timestamp: firebase.database.ServerValue.TIMESTAMP
         });
     }).then(() => {
-        uploadResult.textContent = `Quest proof received. File "${fileName}" successfully uploaded. Awaiting verification.`;
+        proofUploadForm.style.display = "none";
+
+        uploadResult.textContent = `Quest proof received. File "${fileName}" successfully uploaded. We'll contact you on Telegram as soon as your proof has been reviewed.`;
         
         sendTelegramNotification(`Proof uploaded by ${participantName}. Description: ${description}`);
 
@@ -236,11 +234,9 @@ function typeWriter(text, elementId, speed = 50) {
       }
     }
     type();
-  }
+}
   
-
-
-  document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     
     const rules = [
       "Rule #1: Do not talk about the Quest.",
@@ -253,9 +249,9 @@ function typeWriter(text, elementId, speed = 50) {
         typeWriter(rule, `rule${index + 1}`, 25);
       }, index * 1500);
     });
-  });
+});
 
-  function updateFileName() {
+function updateFileName() {
     const fileInput = document.getElementById('proofFile');
     const fileNameDisplay = document.getElementById('file-name-display');
     if (fileInput.files.length > 0) {
@@ -263,7 +259,7 @@ function typeWriter(text, elementId, speed = 50) {
     } else {
         fileNameDisplay.textContent = '';
     }
-  }
+}
 
 
   // Function to find the closest matching name
@@ -317,17 +313,15 @@ function checkName() {
     const nameInput = document.getElementById("nameInput");
     const name = nameInput.value.trim();
     const taskResult = document.getElementById("taskResult");
-    const proofUpload = document.getElementById("proofUpload");
     
     taskResult.textContent = "Accessing database...";
-    proofUpload.style.display = "none";
     
     setTimeout(() => {
         if (name.toLowerCase() in tasksDatabase) {
             const task = tasksDatabase[name.toLowerCase()];
             taskResult.textContent = "";
             typeWriter(`Your Quest: ${task}`, "taskResult", 30);
-            proofUpload.style.display = "block";
+            showProofUploadForm(); // Show the upload form when a valid name is entered
 
             sendTelegramNotification(`Task retrieved by ${name}: ${task}`);
         } else {
@@ -362,4 +356,11 @@ function sendTelegramNotification(message) {
     .then(data => console.log('Telegram notification sent:', data))
     .catch((error) => console.error('Error sending Telegram notification:', error));
 }
-  
+
+function showProofUploadForm() {
+    const proofUploadForm = document.getElementById("proofUpload");
+    const uploadResult = document.getElementById("uploadResult");
+    
+    proofUploadForm.style.display = "block";
+    uploadResult.textContent = ""; // Clear any previous messages
+} 
