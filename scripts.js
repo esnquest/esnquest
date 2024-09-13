@@ -143,7 +143,7 @@ const tasksDatabase = {
 "colin hafen": "Convince Tom Rathjens to create a secret handshake with you.",
 "luc lücking": "Find Oriane Petit-Phar and ask them to draw a quick portrait of you.",
 "clara gloge": "Convince Herald Nakpil to help you serenade a random participant with a love song.",
-"noah trippant": "Get Colin Hafen to participate in a 15-second dance battle with you.",
+"noah trippens": "Get Colin Hafen to participate in a 15-second dance battle with you.",
 "aymeric rio": "Ask Blanche Roquejeoffre to show you a hidden talent or party trick.",
 "tom rathjens": "Ask Augustin Henry to show you a hidden talent or party trick.",
 "sarah bruno": "Find Quentin Devaud and ask them to draw a quick portrait of you.",
